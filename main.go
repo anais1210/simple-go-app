@@ -4,9 +4,6 @@ import (
 	"fmt"
 	"sort"
 )
-func printSlice(s []string) {
-    fmt.Printf("len=%d cap=%d %v", len(s),cap(s), s)
-}
 
 func sortName(){
     var name string
