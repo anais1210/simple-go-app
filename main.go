@@ -4,38 +4,40 @@ import (
 	"fmt"
 )
 
-type City struct {
-    cityname string
-    population uint
-    zipcode uint
-    surface uint
-}
+func transaction(){
+    var transactionNumber int
+    fmt.Println("Transaction number: ")
+    fmt.Scanln(&transactionNumber)
 
-func city(){
-    var mapping = map[string]City{}
-    var numberofcities int
-    fmt.Println("How many cities do you want to enter?")
-    fmt.Scanln(&numberofcities)
-    fmt.Println("Number of cities: ", numberofcities)
+    
+    var choice int
+    fmt.Println("1. Seconde")
+    fmt.Println("2. Minute")
+    fmt.Println("3. Hour")
+    fmt.Scanf("%d", &choice)
 
-    for i := 0; i < numberofcities; i++ {
-        var cityname string
-        var population uint
-        var zipcode uint
-        var surface uint
-        fmt.Println("Enter the name of the city: ")
-        fmt.Scanln(&cityname)
-        fmt.Println("Enter the population of the city: ")
-        fmt.Scanln(&population)
-        fmt.Println("Enter the zipcode of the city: ")
-        fmt.Scanln(&zipcode)
-        fmt.Println("Enter the surface of the city: ")
-        fmt.Scanln(&surface)
-        mapping[cityname] = City{cityname, population, zipcode, surface}
+
+    switch choice {
+    case 1:
+    var seconde int
+    fmt.Scanln("Enter: ")
+    fmt.Scanf("%d", &seconde)
+    fmt.Printf("Transaction by seconde %d for %d: ", transactionNumber, seconde) 
+    case 2:
+    var minute int
+    fmt.Scanln("Enter: ")
+    fmt.Scanf("%d", &minute)
+    fmt.Printf("Transaction by minute %d for %d: ", transactionNumber, minute) 
+    fmt.Println("transaction by minute.")
+    case 3:
+    var hour int
+    fmt.Scanln("Enter: ")
+    fmt.Scanf("%d", &hour)
+    fmt.Printf("Transaction by hour %d for %d: ", transactionNumber, hour) 
     }
-    fmt.Println("Mapping: ", mapping)
+
 }
 
 func main(){
-    city()
+    transaction()
 }
