@@ -1,25 +1,15 @@
 package main
-
 import (
-	"fmt"
-	"sort"
+    "fmt"
+    "net/http"
+    "io"
+    "log"
 )
-
-func sortName(){
-    var name string
-    var nameList []string
-    for {
-        fmt.Println("Enter a name:")
-        fmt.Scanf("%s", &name)
-        nameList = append(nameList, name)
-        if(name == "X"){
-            break
-        }
-    }
-    sort.Strings(nameList)
-    fmt.Printf("%v",nameList)
+func apiRequest()string{
+    resp, err :=
 }
 
 func main(){
-    sortName()
+    apiRequest()
 }
+// https://docs.kraken.com/rest/#tag/Market-Data/operation/getServerTime
